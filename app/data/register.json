@@ -1,0 +1,8 @@
+{
+  "status": {
+    "type": "success",
+    "message": "Success",
+    "code": 200,
+    "error": false
+  }
+}

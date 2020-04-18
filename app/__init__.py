@@ -10,12 +10,15 @@ import json
 from flask import Flask
 from flask import jsonify
 from .config.default import config
+from flask_cors import CORS, cross_origin
 
 
 def create_app(test_config=None):
     """Create and configure the Mock API."""
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config)
+    cors = CORS(app)
+    # app.config['CORS_HEADERS'] = 'Content-Type'
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -38,9 +41,16 @@ def create_app(test_config=None):
     def home():
         return str('Welcome to the Mocking API.')
 
-    @app.route('/api/mock')
-    def mock():
-        data = readJsonFile('app/data/mock.json')
+    @cross_origin()
+    @app.route('/api/login',  methods=['GET'])
+    def login():
+        data = readJsonFile('app/data/login.json')
+        return jsonify(data)
+
+    @cross_origin()
+    @app.route('/api/register', methods=['POST'])
+    def register():
+        data = readJsonFile('app/data/register.json')
         return jsonify(data)
 
     app.add_url_rule('/', endpoint='home')

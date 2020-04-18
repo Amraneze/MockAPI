@@ -1,0 +1,31 @@
+{
+  "status": {
+    "type": "success",
+    "message": "Success",
+    "code": 200,
+    "error": false
+  },
+  "data": {
+    "user": {
+      "username": "test.test",
+      "email": "test.test@gmail.com",
+      "firstname": "Amrane",
+      "id": "99965E43-C535-49F6-900C-2FFE77002549",
+      "lastname": "test",
+      "roles": ["ROLE_USER"]
+    },
+    "organization": {
+      "organizationId": "99965E43-C535-49F6-900C-2FFE77002549",
+      "organizationName": "IT Insight"
+    },
+    "userId": "99965E43-C535-49F6-900C-2FFE77002549",
+    "loginAttempts": 0,
+    "remainingLockTime": 0,
+    "expiresAt": 1587148799390,
+    "sessionToken": "3feedcdeccfa56f536a1e9ddc92275e7e78025640882eb106964622e6d9edf36eaca970a00d27710e7e88c38f54239d1c704c4f993f28358277d0caa53fbc2681c4214c6f1ad02d7ea661dbff4e2dd906afab382f47ee489fdb9b85754538e904674d76e7a7c82ee5137dfeadb094a441da9916f77ce8356f7a23d864d510e43221f9e86d3240b172dd0731faa8045f35bb6185b99af701629b5391c4fe1516936f0fa17e21c01b8eefee6cfb143f00b496c3a332bdbe2ddd534c2301e466eb79d3bce77e11d81ce67eb8ba5c93385798d417dca01a56e015647377cc29ed3403a7a3bd93101f0exea415f100ecab9e0d3544847ec6fe583f00bcd2e026f21292",
+    "lastConnection": 1587148794390,
+    "forcePasswordChange": false,
+    "isAccountLocked": false,
+    "isFirstConnection": true
+  }
+}
