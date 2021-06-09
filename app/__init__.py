@@ -53,6 +53,19 @@ def create_app(test_config=None):
         data = readJsonFile('app/data/register.json')
         return jsonify(data)
 
+    @cross_origin()
+    @app.route('/api/password/reset', methods=['POST'])
+    def reset():
+        data = readJsonFile('app/data/reset.json')
+        return jsonify(data)
+
+    @cross_origin()
+    @app.route('/api/password/recover/<key>', methods=['POST'])
+    def recover(key):
+        print(key)
+        data = readJsonFile('app/data/recover.json')
+        return jsonify(data)
+
     app.add_url_rule('/', endpoint='home')
 
     return app
